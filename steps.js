@@ -1,11 +1,11 @@
 const wrapperEl = document.querySelector('.container');
 const numberOfEls = 15;
-const duration = 5000;
+const duration = 1000;
 //const delay = duration / numberOfEls;
 const delay = 0;
 
     let tl = anime.timeline({
-      duration: duration,
+      //duration: duration,
       complete: function() { tl.restart(); }
     });
 
@@ -31,13 +31,22 @@ function createEl(i) {
     //   }
     // });
 
-    anime({
-        targets: el,
-        rotate: [rotate + 'deg', rotate + 10 +'deg'],
-        translateX: [0,200],
-        easing: 'easeInOutSine',
-        duration: duration * .1
+    tl.add({
+        begin: function() {
+            anime({
+                targets: el,
+                rotate: [rotate + 'deg', rotate + 10 +'deg'],
+                translateX: [0,200],
+                easing: 'easeInOutSine',
+                duration: duration * .1,
+                direction: 'alternate'
+            })
+            
+
+        }
+        
     })
+    
     wrapperEl.appendChild(el);
   };
 
