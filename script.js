@@ -67,7 +67,8 @@ function circleTransition() {
         .transition().duration(3000)
         .attr("r", 7)    
         .attr('cx', (d,i) => Math.round(xPosition + d * Math.cos(i))) 
-        .attr('cy', (d,i) => Math.round(yPosition + d * Math.sin(i))) 
+        .attr('cy', (d,i) => Math.round(yPosition + d * Math.sin(i)))
+        // .attr("transform", (d,i) => "rotate(" + i * .005 +")") 
         .transition().duration(1000)
         .attr("r", 15)
         //.on("end", repeat)   // when the transition finishes start again
