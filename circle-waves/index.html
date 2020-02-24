@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<main class="container">
+
+    <div class="waves">
+        <svg >
+            <filter id="displacementFilter">
+                <feTurbulence type="turbulence" baseFrequency="0" numOctaves="10" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <circle id="wavy" cx="200" cy="250" r="200" filter="url(#displacementFilter)"></circle>    
+              <circle id="wavy" cx="200" cy="250" r="30" fill="white" filter="url(#displacementFilter)"></circle>    
+        </svg>
+        <h1>Patience young one, <br> your time is coming</h1>
+    </div>
+
+    <div class="circles">
+    </div>
+</main>
+
+
+<script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
+<script src="waves.js"></script>

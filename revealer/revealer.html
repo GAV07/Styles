@@ -1,0 +1,62 @@
+<head>
+    <link rel="stylesheet" href="revealer.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+</head>
+
+<body class="demo-2">
+
+    <main>
+        <div class="content content--grid content--third">
+            <p class="content__text">Dubois uses the simple horizontal bar chart to show the complexity of how black americans 
+                stack up to the rest of the world when looked at throught the educational lens. 
+                One thing that I continue to appreciate from this work is the constant focus of black americans as a nation of people in themselves.
+                A society within a society if you will.</p>
+            <div class="reel">
+                <span class="reel__number">001</span>
+            </div>
+
+            <button class="content__back" aria-label="Back to main view"></button>
+        </div>
+        <div class="overlay">
+            <div class="overlay__inner"></div>
+        </div>
+        <div class="content content--grid content--second">
+            <h3 class="content__title">Illiteracy</h3>
+            <div class="reel">
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="content content--first"><!-- only rotated -->
+            <div class="content__move"><!-- sized and moved -->
+                <div class="content__reverse">
+                    <div class="intro">
+                        <div class="frame">
+                            <div class="frame__title-wrap">
+                                <h1 class="frame__title">W.E.B Dubois Data Visualization</h1>
+                                <div class="frame__links">
+                                    <a href="#">Next Project</a>
+                                </div>
+                            </div>
+                            <div class="frame__demos">
+                                <a href="revealer.html" class="frame__demo">01</a>
+                                <a href="revealer2.html" class="frame__demo frame__demo--current">02</a>
+                                <a href="revealer3.html" class="frame__demo">03</a>
+                            </div>
+                        </div>
+                        <div class="intro__img" style="background-image: url(../img/Illiteracy.png)"></div>
+                        <h2 class="intro__title">Plate 47</h2>
+                        <a href="#" class="intro__enter">enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../Resources/tweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
+    <script src="../Resources/charming.min.js"></script>
+    <script src="../Resources/colorbrewer.js"></script>
+    <script src="revealer.js"></script>
+    <script src="chart47.js"></script>
+    
+</body>

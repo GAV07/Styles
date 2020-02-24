@@ -1,0 +1,49 @@
+
+<head>
+    <style>
+
+        :root {
+            --bk: "white";
+        }
+
+
+    .container {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .text {
+        z-index: 1;
+        font-size: 5em;
+    }
+
+    .el {
+      position: absolute;
+      opacity: 1;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      background: white;
+      z-index: 0;
+    }
+
+    </style>
+</head>
+
+
+<div class="container">
+
+    <div class="text">
+        <h1>Gavin</h1>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+<script src="steps.js"></script>
