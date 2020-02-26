@@ -57,7 +57,7 @@ const thirdPageContent = {
     backCtrl: content.third.querySelector('.content__back'),
     text: content.third.querySelector('.content__text'),
     selectElems: content.third.querySelectorAll('.select > *'),
-    reelNumbers: content.third.querySelectorAll('.reel > .reel__number')
+    reelNumbers: content.third.querySelectorAll('.number__wrapper > .reel__number')
 };
 
 // Revealer element (first page)
@@ -137,7 +137,7 @@ const showNextPage = () => {
         ease: Expo.easeOut,
         startAt: {scale: 0},
         scale: 1,
-        opacity: 1
+        opacity: .1
     }, 0.05, thirdPageTime+0.9);
 };
 firstPageContent.enter.addEventListener('click', showNextPage);

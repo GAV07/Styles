@@ -1,4 +1,4 @@
-const width = 1000
+const width = 800
 const height = 500
 
 const svg = d3.select(".chart")
@@ -22,7 +22,7 @@ let data = [
 
 const xValue = d => d.count
 const yValue = d => d.country
-const margin = { top: 10, right: 150, left: 200, bottom: 100}
+const margin = { top: 10, right: 150, left: 80, bottom: 100}
 const innerWidth = width - margin.left - margin.right
 const innerHeight = height - margin.top - margin.bottom
 

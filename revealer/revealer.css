@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-	--color-text: #2e2e2e;
+	--color-text: #fff;
 	--color-text-frame: #fff;
 	--color-bg: #505F6F;
 	--color-link: #555;
@@ -15,9 +15,9 @@ body {
 	--color-intro-bg: #0e0e0e;
 	--color-intro-title: #fff;
 	--color-enter: #fff;
-	--color-content-title: #111;
-	--color-content-text: #868181;
-	--color-reel-number: #111;
+	--color-content-title: #fff;
+	--color-content-text: #D5DFE5;
+	--color-reel-number: #fff;
 	--color-menu-link: #101010;
 	--color-menu-link-hover: #000;
 	color: var(--color-text);
@@ -29,7 +29,7 @@ body {
 }
 
 .demo-2 {
-	--color-overlay: #fff;
+	--color-overlay: #BFBFBF;
 }
 
 main {
@@ -258,12 +258,11 @@ a:focus {
 
 .content--grid {
 	padding: 2rem;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 40px auto auto auto auto;
-	grid-template-areas: 	'back social'
+	grid-template-columns: 30% 50%;
+	grid-template-rows: 40px auto auto auto;
+	grid-template-areas: 	'back number'
 							'title title'
 							'text text'
-							'select select'
 							'reel reel';
 }
 
@@ -289,6 +288,7 @@ a:focus {
 	color: var(--color-content-title);
 	font-size: 2.5rem;
 	line-height: 1;
+	letter-spacing: .04em;
 	position: relative;
 	margin: 0 0 1rem 0;
 	padding: 0 0 1rem 0;
@@ -341,12 +341,16 @@ a:focus {
 	float: left;
 }
 
+.number__wrapper {
+	grid-area: number;
+}
+
 .reel__number {
-	width: 40px;
 	height: 300px;
 	display: block;
-	margin: 0 0 1.5rem auto;
-	font-size: 2.75rem;
+	font-size: 2rem;
+	margin: 5rem 2rem 0 0;
+	text-align: right;
 	font-family: "Playfair Display SC", sans-serif;
 	font-weight: 700;
 	line-height: 1;
@@ -446,68 +450,3 @@ a:focus {
 
 
 
-@media screen and (min-width: 53em) {
-	main {
-		overflow: hidden;
-	}
-	.frame {
-		position: absolute;
-		text-align: left;
-		top: 0;
-		left: 0;
-		display: grid;
-		align-content: space-between;
-		width: 100%;
-		max-width: none;
-		height: 100vh;
-		padding: 2rem 3rem;
-		pointer-events: none;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: auto auto auto;
-		grid-template-areas: 'title demos'
-							'... ...'
-							'... ...';
-	}
-	.frame__title-wrap {
-		grid-area: title;
-		display: flex;
-	}
-	.frame__title {
-		margin: 0;
-	}
-	.frame__tagline {
-		position: relative;
-		margin: 0 0 0 1rem;
-		padding: 0 0 0 1rem;
-		opacity: 0.5;
-	}
-
-	.frame a {
-		pointer-events: auto;
-	}
-	.content--first {
-		position: relative;
-	}
-	.content--grid {
-		padding: 5rem 3rem 2rem 6rem;
-		grid-template-columns: 50% 250px auto;
-		grid-column-gap: 1rem;
-		grid-template-rows: repeat(4,25%);
-		grid-template-areas: 	'back ... ...'
-								'title reel ...'
-								'text reel ...'
-								'social reel select';
-	}
-	.content__title {
-		font-size: 3.5rem;
-		margin: 0 0 4rem 0;
-		padding: 0 0 2rem 0;
-		width: 350px;
-	}
-	.content__text {
-		max-width: 250px;
-	}
-	.reel {
-		margin: 0 0 -8rem 0;
-	}
-}
