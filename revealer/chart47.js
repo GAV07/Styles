@@ -37,7 +37,7 @@ const xScale = d3.scaleLinear()
 
 const colorQuantize = d3.scaleQuantize()
         .domain([0, d3.max(data, xValue)])
-        .range(colorbrewer.YlGnBu[7]);
+        .range(colorbrewer.Blues[7]);
 
 //Margin space for entire chart
 const g = svg.append("g")
@@ -60,7 +60,12 @@ const bars = g.selectAll("rect")
         .attr("width", 0)
         .attr("y", d => yScale(yValue(d)))
         .attr("height", yScale.bandwidth())
-        .attr("fill", d => colorQuantize(xValue(d)))
+        .attr("fill", d => {
+            if(d.country == "Negroes, U.S.A.") {
+                return "#d91200"
+            } 
+            else return colorQuantize(xValue(d))
+        })
 
 bars.transition().duration(3000)
         .attr("x", 0)
