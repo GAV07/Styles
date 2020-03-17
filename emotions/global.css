@@ -1,0 +1,29 @@
+
+
+:root {
+    --yellow: #FFCC52;
+    --red: #CF4520;
+    --orange: #FF9438;
+}
+
+body {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.anger {
+    height: 100%;
+    width: 100%;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anger_particle {
+    position: absolute;
+    border-radius: 100%;
+    background: var(--orange);
+    width: 10px;
+    height: 10px;
+}
