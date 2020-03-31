@@ -1,0 +1,11 @@
+.tick line {
+    opacity: .2;
+}
+
+.domain {
+    opacity: 0;
+}
+
+.chart40 {
+    background-color: slategray;
+}

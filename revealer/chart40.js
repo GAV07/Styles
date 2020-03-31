@@ -53,14 +53,18 @@ const yAxis = d3.axisLeft()
     
 
 svg.append("g")
-    .attr("class", "axis")
+    .attr("class", "x-axis")
     .attr("transform", "translate(0," + innerHeight + ")")
     .call(xAxis)
+    .selectAll("text")
+        .attr("transform", "translate(0,10)")
 
 svg.append("g")
-    .attr("class", "axis")
+    .attr("class", "y-axis")
     .attr("transform", "translate(" + 0 + ",0)")
     .call(yAxis)
+    .selectAll("text")
+        .attr("transform", "translate(-10,0)")
 
 const blackLine = d3.line()
     .curve(d3.curveBasis)

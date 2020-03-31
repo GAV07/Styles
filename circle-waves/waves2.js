@@ -1,8 +1,7 @@
 //create a bunch of cirlces
-const numofCircles = 250
+const numofCircles = 50
 const nodes = []
 const svg = d3.select("svg")
-
 const innerWidth = document.querySelector("svg").clientWidth
 const innerHeight = document.querySelector("svg").clientHeight
 
@@ -32,11 +31,10 @@ function createCircle(radius, name) {
 }
 
 createCircle(200, "outer")
-createCircle(150, "inner")
-createCircle(50, "small")
+//createCircle(150, "inner")
+//createCircle(50, "small")
 
 const list = [".outer", ".inner", ".small"]
- 
  
 anime.set( list, {
     translateX: function() {
@@ -64,28 +62,19 @@ anime.set( list, {
  })
  .add({
      targets: list,
-     //delay: anime.stagger(10),
-     fill: ["#FFE033", "#22706B"],
-     width: 50
+     translateX: (e,i) => {
+         if(i%2 == 0) {
+             return (-100 * Math.cos((i / (numofCircles/2)) * Math.PI)) 
+         } else {
+             return 0
+         }
+     },
+     translateY: (e,i) => {
+         if(i%2 == 0) {
+             return (-100 * Math.sin((i / (numofCircles/2)) * Math.PI)) 
+             return 0
+         }
+     }
  })
- .add({
-    targets: "rect",
-    rotate: 360,
-    fill: ["#22706B", "#EA5643"],
- })
- .add({
-    targets: list,
-    //delay: anime.stagger(10),
-    width: 10
-})
- .add({
-    targets: "rect",
-    opacity: 0,
-    translateX: function() {
-        return anime.random(-200,100)
-    },
-    translateY: function() {
-        return anime.random(-200,100)
-    }
- })
+
  
