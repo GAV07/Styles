@@ -41,4 +41,8 @@ rect {
     transform-origin: center;
 }
 
+.outer {
+    transform-origin: center;
+}
+
 

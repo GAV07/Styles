@@ -32,19 +32,19 @@ function createCircle(radius, name) {
 
 createCircle(200, "outer")
 //createCircle(150, "inner")
-//createCircle(50, "small")
+createCircle(100, "small")
 
 const list = [".outer", ".inner", ".small"]
  
-anime.set( list, {
-    translateX: function() {
-        return anime.random(-200,100)
-    },
-    translateY: function() {
-        return anime.random(-200,100)
-    },
-    opacity: 0
-})
+// anime.set( list, {
+//     translateX: function() {
+//         return anime.random(-200,100)
+//     },
+//     translateY: function() {
+//         return anime.random(-200,100)
+//     },
+//     opacity: 0
+// })
 
  const tl = anime.timeline({
      duration: 2000,
@@ -75,6 +75,14 @@ anime.set( list, {
              return 0
          }
      }
+ })
+ .add({
+     targets: list,
+     rotate: [
+         {value: 90, duration: 2000},
+         {value: -90, duration: 2000}
+     ],
+     fill: ["#FFE033", "#EFF0F1"]
  })
 
  
