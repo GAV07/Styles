@@ -1,0 +1,33 @@
+
+/* **Must add
+<svg class="seam top"><rect></rect></svg>
+<svg class="seam bottom"><rect></rect></svg>  */
+
+
+.seam {
+    position: absolute;
+    z-index: -1;
+    width: 20rem;
+    height: 5rem;
+    transform: rotate(-45deg);
+}
+
+.top {
+    left: -15%;
+    top: 0;
+}
+
+.bottom {
+    right: -10%;
+    bottom: 10%;
+}
+
+.seam rect {
+    fill: none;
+    width: 20rem;
+    height: 5rem;
+    stroke: var(--orange);
+    stroke-width: .35rem;
+    stroke-dasharray: 5 5;
+}
+
