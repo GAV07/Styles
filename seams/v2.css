@@ -1,0 +1,35 @@
+
+:root {
+    --blue: #2B5B6C;
+    --green: #C7CFAC;
+    --red: #E34F33;
+    --orange: #FFC87E;
+    --logo-height: 40rem;
+    --logo-width: 40rem;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper {
+    height: var(--logo-height);
+    width: var(--logo-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+text {
+    font-family: "Spartan", serif;
+    font-size: 5rem;
+    text-anchor: middle;
+    fill: none;
+    stroke: var(--red);
+    stroke-width: 2;
+}
